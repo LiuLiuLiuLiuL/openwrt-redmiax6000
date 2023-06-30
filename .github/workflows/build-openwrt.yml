@@ -162,7 +162,7 @@ jobs:
       uses: softprops/action-gh-release@v1
       if: steps.tag.outputs.status == 'success' && !cancelled()
       env:
-        GITHUB_TOKEN: ${{ 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 }}
+        GITHUB_TOKEN: ${{ secrets.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 }}
       with:
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
@@ -181,7 +181,7 @@ jobs:
         keep_latest: 3
         delete_tags: true
       env:
-        GITHUB_TOKEN: ${{ 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 }}
+        GITHUB_TOKEN: ${{ secrets.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 }}
      
      #secrets.
       
